@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/5/slate/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/style.css">
     <title>Contacto</title>
 </head>
 <body>
-    <script src="script.js"></script>
+    <header></header>
+    <main>
+        <form id="formContacto">
+            <p>Contacto</p>
+            <input id="datos" type="text" name="nombre" placeholder="Escriba su nombre">
+            <input id="datos" type="text" name="apellido" placeholder="Escriba su apellido">
+            <input id="datos" type="email" name="email" placeholder="Escriba su correo">
+            <input id="datos" type="text" name="telefono" placeholder="Escriba su teléfono">
+            <textarea class="textArea" name="mensaje" cols="30" rows="10"
+                placeholder="Escriba aqui su mensaje"></textarea>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        <div class="container">
+            <button id="mostrarConsulta" type="submit">Mostrar Consulta</button>
+            <div id="divConsultas" class="row"></div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="../script.js"></script>
 </body>
 </html>
