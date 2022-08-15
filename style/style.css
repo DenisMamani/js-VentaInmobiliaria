@@ -7,6 +7,76 @@
 main{
     min-height: 100vh;
 }
+/*header*/
+.header {
+  background-color: #0a0a0a;
+  box-shadow: #ffffff 0px 0px 10px 0px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+.offcanvas {
+  background-color: #212529; }
+  .offcanvas .offcanvas-header {
+    align-items: start;
+    border-bottom: 1px solid #5e5858; }
+.lista {
+  display: flex;
+  justify-content: end; }
+  .lista a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0px 30px; }
+    @media (max-width: 414px) {
+      .logoBlanco {
+        width: 70px; }
+      .lista {
+        justify-content: center;
+        margin-top: 90px; }
+        .lista a {
+          justify-content: center;
+          color: #ffffff;
+          font-size: 18px;
+          margin-bottom: 50px; } }
+    
+    @media (min-width: 415px) and (max-width: 450px) {
+      .logoBlanco {
+        width: 70px; }
+      .lista {
+        justify-content: center;
+        margin-top: 110px; }
+        .lista a {
+          justify-content: center;
+          color: #ffffff;
+          font-size: 25px;
+          margin-bottom: 80px; } }
+    
+    @media (min-width: 450px) and (max-width: 767px) {
+      .logoBlanco {
+        margin-left: 135px; }
+      .lista {
+        justify-content: center; }
+        .lista a {
+          justify-content: center;
+          color: #ffffff;
+          font-size: 22px;
+          margin-top: 80px; } }
+    
+    @media (min-width: 1024px) {
+      .logo {
+        width: 70px !important; }
+      .lista li:hover {
+        transition: 1.2s;
+        background-color: #ffffff;
+        border-radius: 5px; }
+        .lista li:hover a {
+          color: #000000; }
+      .lista li a {
+        display: block;
+        padding: 5px 15px;
+        border: none; } }
 /*contacto*/
 #formContacto {
     background-color: #0a0a0ad3;
@@ -16,7 +86,7 @@ main{
     height: 550px;
     margin: auto;
     padding: 30px;
-    margin-top: 70px;
+    margin-top: 270px;
     margin-bottom: 80px;
     border: solid white; }
     #formContacto p {
@@ -62,5 +132,77 @@ main{
       background-color: #ffffff;
       color: #000000;
       border-radius: 5px;
-      
+}
+/*consultas*/
+#divConsultas{
+  margin-top: 50px;
+  gap: 30px;
+}
+/*tasacion*/
+#formTasacion {
+  margin: 220px 100px 0px 100px;
+  text-align: center;
+  background-color: #0a0a0ad3;
+  border-radius: 10px;
+  width: 380px;
+  height: 620px;
+  padding: 25px;
+  margin-bottom: 20px;
+  border: solid white; }
+#formTasacion p {
+  font-size: 22px;
+  font-family: sans-serif;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+  text-align: center; }
+#formTasacion #dire {
+  font-size: 18px;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+  border: 0px; }
+#formTasacion .botonTasacion {
+  font-weight: bolder;
+  font-size: 18px;
+  padding: 10px;
+  font-family: sans-serif;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 5px;
+  border: 0px; }
+#formTasacion #datos {
+  font-family: sans-serif;
+  font-size: 18px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 0px; }
+#formTasacion .textArea {
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding: 11px;
+  height: 140px;
+  font-family: sans-serif;
+  width: 100%;
+  border-radius: 5px;
+  border: 0px;
+  resize: none; }
+  #mostrarTasacion{
+      font-weight: bolder;
+      font-size: 18px;
+      padding: 10px;
+      font-family: sans-serif;
+      width: 200px;
+      background-color: #ffffff;
+      color: #000000;
+      border-radius: 5px;
+  }
+  /*tasaciones*/
+#divTasacion{
+    margin-top: 50px;
+    gap: 30px;
 }
