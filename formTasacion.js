@@ -9,15 +9,7 @@ class Tasacion{
     this.descPropiedad=descPropiedad;
     }
 }
-// const tasaciones =JSON.parse(localStorage.getItem("tasaciones")) ??[]
-
-let tasaciones=[];
-if(localStorage.getItem("tasaciones")){
-    tasaciones=JSON.parse(localStorage.getItem("tasaciones"))
-}
-else{
-    localStorage.setItem("tasaciones",JSON.stringify(tasaciones))
-}
+ const tasaciones =JSON.parse(localStorage.getItem("tasaciones")) ??[]////Operador
 const formTasacion=document.getElementById("formTasacion");
 const botonTasacion=document.getElementById("mostrarTasacion")
 const divTasacion=document.getElementById("divTasacion")

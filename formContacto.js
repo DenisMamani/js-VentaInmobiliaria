@@ -8,7 +8,7 @@ class Contacto{
     this.mensaje=mensaje;
     }
 }
-const consultas =JSON.parse(localStorage.getItem("consultas")) ??[]
+const consultas =JSON.parse(localStorage.getItem("consultas")) ??[]//Operador
 
 const formContacto=document.getElementById("formContacto");
 const botonConsulta=document.getElementById("mostrarConsulta")
