@@ -19,6 +19,20 @@ formContacto.addEventListener("submit",(e)=>{
     const objContaco=new Contacto (datosForm.get("nombre"), datosForm.get("apellido"), datosForm.get("email"), datosForm.get("telefono"), datosForm.get("mensaje"))
     consultas.push(objContaco)
     localStorage.setItem("consultas",JSON.stringify(consultas))
+    Toastify({
+        text: "Pregunta Enviada",
+        duration: 1000,
+        //destination: "https://github.com/apvarun/toastify-js",
+        //newWindow: true,
+        close: true,
+        gravity: "top", 
+        position: "right", 
+        stopOnFocus: true,
+        style: {
+          background: "linear-gradient(to right, #232526, #414345)",
+        },
+        onClick: function(){} 
+      }).showToast();
     formContacto.reset()
 })
 botonConsulta.addEventListener('click',()=>{

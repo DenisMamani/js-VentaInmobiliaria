@@ -13,12 +13,27 @@ class Tasacion{
 const formTasacion=document.getElementById("formTasacion");
 const botonTasacion=document.getElementById("mostrarTasacion")
 const divTasacion=document.getElementById("divTasacion")
+const botonEnviar=document.getElementById("botonEnviar")
 formTasacion.addEventListener("submit",(e)=>{
     e.preventDefault()
     const datosTasac= new FormData(e.target)
     const objtTasc=new Tasacion (datosTasac.get("nombre"), datosTasac.get("apellido"),datosTasac.get("direPropiedad"), datosTasac.get("email"), datosTasac.get("telefono"), datosTasac.get("descPropiedad"))
     tasaciones.push(objtTasc)
     localStorage.setItem("tasaciones",JSON.stringify(tasaciones))
+    Toastify({
+        text: "Tasación Enviado",
+        duration: 1000,
+        //destination: "https://github.com/apvarun/toastify-js",
+       // newWindow: true,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: false,
+        style: {
+          background: "linear-gradient(to right, #232526, #414345)",
+        },
+        onClick: function(){} 
+      }).showToast();
     formTasacion.reset()
 })
 botonTasacion.addEventListener('click',()=>{
@@ -47,4 +62,4 @@ botonTasacion.addEventListener('click',()=>{
             localStorage.setItem("tasaciones",JSON.stringify(tasaciones))
          })
         })
-    }) 
+    })
