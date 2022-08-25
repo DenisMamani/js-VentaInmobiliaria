@@ -13,13 +13,25 @@ const consultas =JSON.parse(localStorage.getItem("consultas")) ??[]//Operador
 const formContacto=document.getElementById("formContacto");
 const botonConsulta=document.getElementById("mostrarConsulta")
 const divConsultas=document.getElementById("divConsultas")
+const btn = document.getElementById('button');
 formContacto.addEventListener("submit",(e)=>{
     e.preventDefault()
     const datosForm= new FormData(e.target)
     const objContaco=new Contacto (datosForm.get("nombre"), datosForm.get("apellido"), datosForm.get("email"), datosForm.get("telefono"), datosForm.get("mensaje"))
     consultas.push(objContaco)
     localStorage.setItem("consultas",JSON.stringify(consultas))
-    Toastify({
+    formContacto.reset()
+})
+document.getElementById('formContacto')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+   const serviceID = 'default_service';
+   const templateID = 'template_629fiz9';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Enviar';
+      Toastify({
         text: "Pregunta Enviada",
         duration: 1000,
         //destination: "https://github.com/apvarun/toastify-js",
@@ -33,8 +45,11 @@ formContacto.addEventListener("submit",(e)=>{
         },
         onClick: function(){} 
       }).showToast();
-    formContacto.reset()
-})
+    }, (err) => {
+      btn.value = 'Enviar';
+      alert(JSON.stringify(err));
+    });
+});
 botonConsulta.addEventListener('click',()=>{
     const consultaStorage=JSON.parse(localStorage.getItem("consultas"))
  divConsultas.innerHTML=""
